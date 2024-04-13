@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Multiplication Table</title>
+    <style>
+        body{
+        background-color: skyblue;
+        }
+
+    </style>
+    <script>
+        function multiply() {
+          var num = document.getElementById("num").value;
+          var i;
+          document.write("<center><h1> Multiplication Table of " + num + "</h1> <br>");
+          document.write("<font size='25pt'>");
+          document.write("<table align='center' border='1' height='100' width='300'>");
+          document.write("<tr height='30'>");
+          document.write("<td align='center'></td>");
+          document.write("<td align='center'>Multiplication Value</td>");
+          document.write("<td align='center'>Square Root of result</td>");
+          document.write("</tr>");
+          for (i = 1; i <= 10; i++) {
+            var result = num * i;
+            var sqrtResult = Math.sqrt(result);
+            document.write("<tr height='30'>");
+            document.write("<td align='center'>" + num + " * " + i + "=</td>");
+            document.write("<td align='center' width='30'>"+result+"</td>");
+            document.write("<td align='center' width='60'>" + sqrtResult.toFixed(2) + "</td>");
+            document.write("</tr>");
+          }
+          document.write("</table></font>");
+        }
+    </script>
+</head>
+<body>
+<form>
+    <h2>Generate Multiplication Table</h2><br>
+    <label>Enter a number: </label>
+    <input type="text" id="num"/><br><br>
+    <input type="button" value="Generate Table" onclick="multiply()">
+</form>
+</body>
+</html>

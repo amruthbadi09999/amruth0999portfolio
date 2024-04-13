@@ -1,0 +1,23 @@
+
+<html>
+<head>
+<title>
+Changing the Background Color of a Page
+</title>
+<script>
+function generateColor(){
+const red = Math.floor(Math.random() * 256);
+ const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
+var color="rgb(" + red + ", " + green + ", " + blue + ")";
+ // using inline variable
+document.body.style.background = color; }
+</script>
+</head>
+<body>
+<form>
+<h2> Generating Background color of a page</h2><br>
+    <input type="button" value="Change Backgound Color"
+onclick="generateColor()">
+</form>
+</body>
